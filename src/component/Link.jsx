@@ -1,6 +1,7 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 const Link = ({title, link, className, classNametwo}) => {
-  return <li><a className={className} href={link}>{title}</a>
+  return <li><NavLink className={className} to={link}>{title}</NavLink>
   <span className={classNametwo}></span>
   </li>
 }

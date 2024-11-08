@@ -3,10 +3,10 @@ import { MdArrowForward } from "react-icons/md";
 import { IoChevronBackOutline } from "react-icons/io5";
 import { IoChevronForward } from "react-icons/io5";
 
-const Button = ({ title, btnCondition, clsName}) => {
+const Button = ({ title, btnCondition, clsName, onClick}) => {
     return (
         btnCondition === "title" ? <button className={clsName}>{title}</button> :
-        clsName === "sub" ?  <button className={clsName}> {title} <MdArrowForward className='ms-5' /></button> :  btnCondition === "btn-back" ?
+        clsName === "sub" ?  <button className={clsName} onClick={onClick}> {title} <MdArrowForward className='ms-5' /></button> :  btnCondition === "btn-back" ?
         <button><IoChevronBackOutline className='colr-green' /></button> : 
         btnCondition === "btn-forward" ?  <button><IoChevronForward className='colr-green' /></button> :
         <button className={clsName}><MdArrowForward className='rotate' /> {title}</button>
