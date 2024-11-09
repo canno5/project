@@ -139,6 +139,7 @@ li:hover .border-bottom {
   font-size: 1.1rem;
   color: #333333;
   line-height: 1.5;
+  margin-top: 5rem;
 }
 
 .err-info button,
@@ -551,10 +552,9 @@ li:hover .border-bottom {
 
 .bacg-imglayer {
   position: absolute;
-  bottom: 498px;
+  bottom: 530px;
   width: 100%;
 }
-
 .bacg-imglayer img {
   width: 100%;
 }
@@ -627,4 +627,14 @@ li:hover .border-bottom {
 }
 .info h2{
   padding-bottom: 0;
+}
+.info span:last-child{
+  position: absolute;
+  top: 0px;
+}
+.mt-0{
+  margin-top: 0 !important;
+}
+.tablet{
+  top: -13px !important;
 }

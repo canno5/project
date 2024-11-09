@@ -18,10 +18,10 @@ const About = () => {
                 <div className="home-box">
                     <div className='info'>
                         <Heading heading="I Phone 14 Pro Max" />
-                        <Para para='Supply that meets Demand. Get the Best wholesale prices of used  and refurbished Mobile Stocks.' />
-                        <Para para='Supply that meets Demand. Get the Best wholesale prices of used  and refurbished Mobile Stocks.' />
-                        <Para para='Supply that meets Demand. Get the Best wholesale prices of used  and refurbished Mobile Stocks.' />
-                        <Para para='Supply that meets Demand. Get the Best wholesale prices of used  and refurbished Mobile Stocks.' />
+                        <Para para='Supply that meets Demand. Get the Best wholesale prices of used  and refurbished Mobile Stocks.' clsNameTwo="mt-0" />
+                        <Para para='Supply that meets Demand. Get the Best wholesale prices of used  and refurbished Mobile Stocks.' clsNameTwo="mt-0" />
+                        <Para para='Supply that meets Demand. Get the Best wholesale prices of used  and refurbished Mobile Stocks.' clsNameTwo="mt-0" />
+                        <Para para='Supply that meets Demand. Get the Best wholesale prices of used  and refurbished Mobile Stocks.' clsNameTwo="mt-0" />
                     </div>
                     <div className="mail-info">
                     <Button clsName="stock" title="Stock List" />

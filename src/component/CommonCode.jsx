@@ -8,23 +8,24 @@ import Para from './Para';
 import Button from './Button';
 import Heading from './Heading';
 import { arrImg } from '../arronObj/imgArr';
+import $ from 'jquery'
+import 'jquery-ui/dist/jquery-ui'
 const CommonCode = () => {
     const [inputVal, setInputVal] = useState('');
-    const classAddFunc = () => {
-        setTimeout(() => {
-            document.querySelector(".mobile-phone").classList.add("d-none")
-            document.querySelector(".laptops").classList.add("d-block")
-            setTimeout(() => {
-                document.querySelector(".laptops").classList.remove("d-block")
-                document.querySelector(".tablet").classList.add("d-block")
-            }, 2000);
-
-        }, 2000);        
-    }
-
     useEffect(() => {
-        classAddFunc();
-    },[]);
+        setInterval(() => {
+            $(document).ready(function () {
+                $(".mobile-phone").animate({
+                    top: '350px',
+                }).fadeOut(1000);
+                $(".laptop").delay("slow").addClass("d-block")
+                $(".laptop").animate({
+                    top: '350px',
+                }).hide("slow");
+                $(".tablet").toggle(2000);
+            });
+        }, 2000);
+    });
     return (
         <div className="main-section background-eff background-mob-eff">
             <div className="bacg-imglayer">
@@ -36,9 +37,11 @@ const CommonCode = () => {
                         <div className='info'>
                             <Image imgSrc="images/imag (1).png" className="headingshape" />
                             <Heading conditionhead="twoeff" />
-                            <h2><span className='d-none laptops'> laptops</span>
+                            <h2><span className='mobile-phone'>Mobile Phones</span>
                             </h2>
-                            <h2><span className='d-none tablet'> Tablets</span>
+                            <h2><span className='d-none laptop'>laptops</span>
+                            </h2>
+                            <h2><span className='d-none tablet'>Tablets</span>
                             </h2>
                             <Image imgSrc="images/headingbg.png" className="headingshape-two" />
                             <Para para='Supply that meets Demand. Get the Best wholesale prices of used  and refurbished Mobile Stocks.' />
